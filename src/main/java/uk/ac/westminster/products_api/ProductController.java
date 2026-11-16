@@ -38,4 +38,9 @@ public class ProductController {
     public List<Product> searchProducts(@RequestParam String name) {
         return productService.findByName(name);
     }
+
+    @GetMapping("/summary")
+    public List<String> getProductSummaries() {
+        return productService.getProductSummaries();
+    }
 }
